@@ -4,6 +4,7 @@ const primaryColor = import.meta.env.VITE_APP_PRIMARY_COLOR || "#FFD700";
 const depositLink = import.meta.env.VITE_APP_DEPOSIT_LINK || '#deposit';
 const header_Bg = import.meta.env.VITE_HEADER_BACKGROUND_COLOR || ''
 const Vite_App_Title = import.meta.env.VITE_APP_TITLE || 'BNBKING'
+import WalletConnect from "../walletConnect/index";
 
 const Header: React.FC = () => {
   return (
@@ -18,7 +19,9 @@ const Header: React.FC = () => {
             <Button href={depositLink} variant="outline-warning">Deposit</Button>
           </Nav.Item>
           <Nav.Item className="me-2 mb-2 mb-md-0">
-            <Button variant="outline-warning">Connect Wallet</Button>
+            <Button variant="outline-warning"> Connect
+              <WalletConnect />
+               </Button>
           </Nav.Item>
         </Nav>
       </Container>

@@ -43,7 +43,8 @@ const Dashboard: React.FC = () => {
           </Button>
           </div>
           <p className="text-center mb-4">
-            <strong style={{ fontSize: '1.5rem' }}>You will get your ref link after investing</strong> <i className="h-5 bi bi-clipboard"    onClick={handleCopy} style={{ fontSize: '1.5rem' }}></i>
+            <strong style={{ fontSize: '1.5rem' }}>You will get your ref link after investing</strong>
+             <i className="h-5 bi bi-clipboard"onClick={handleCopy} style={{ fontSize: '1.5rem' }}></i>
           </p>
             {/* Alert for Copy */}
             {showAlert && (

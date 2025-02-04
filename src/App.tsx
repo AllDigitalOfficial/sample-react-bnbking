@@ -6,25 +6,20 @@ import {
   Hero,
   ProfitCalculator,
   Dashboard,
-  Footer
+  Footer,
 } from './components/index';
 import "bootstrap-icons/font/bootstrap-icons.css";
-
-
-
 
 const App: React.FC = () => {
   const  imagebg = import.meta.env.VITE_BACKGROUND_IMAGE || "https://source.unsplash.com/1600x900/?nature,water";
   const primaryColor = import.meta.env.VITE_APP_PRIMARY_COLOR || "#FFD700";
   
-
   return (
     
     <div style={{ backgroundImage: `url(${imagebg})`, color : primaryColor ,minHeight: "100vh", backgroundSize: "cover", backgroundPosition: "center" }}>
-
       <Header />
       <Hero />
-      <ProfitCalculator  minDeposit={100} maxDeposit={10000} dailyROI={0} />
+      <ProfitCalculator  minDeposit={0.02} maxDeposit={300} dailyROI={0} />
       <Dashboard />
       <Footer />
      

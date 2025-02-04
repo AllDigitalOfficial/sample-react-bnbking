@@ -4,18 +4,17 @@ import { ProfitCalculatorProps } from "../../types/types";
 
 
 
-const RANGE_START = Number(import.meta.env.VITE_APP_RANGE_START) || 70;
-const RANGE_END = Number(import.meta.env.VITE_APP_RANGE_END) || 100;
-const DEFAULT_DEPOSIT_PERIOD = Number(import.meta.env.VITE_APP_DEFAULT_DEPOSIT_PERIOD) || 85;
-const BASE_TOTAL_PROFIT = Number(import.meta.env.VITE_APP_BASE_TOTAL_PROFIT) || 140;
-const DAILY_PROFIT_INCREASE = Number(import.meta.env.VITE_APP_DAILY_PROFIT_INCREASE) || 3;
-const MIN_DEPOSIT = Number(import.meta.env.VITE_APP_MIN_DEPOSIT) || 0.02;
-const MAX_DEPOSIT = Number(import.meta.env.VITE_APP_MAX_DEPOSIT) || 300;
+const RANGE_START = 70;
+const RANGE_END = 100;
+const DEFAULT_DEPOSIT_PERIOD =  85;
+const BASE_TOTAL_PROFIT =  140;
+const DAILY_PROFIT_INCREASE =  3;
+
 
 
 const ProfitCalculator: React.FC<ProfitCalculatorProps> = ({
-  minDeposit = MIN_DEPOSIT,
-  maxDeposit = MAX_DEPOSIT,
+  minDeposit = 50,
+  maxDeposit = 300,
 }) => {
   // Initialize depositPeriod to DEFAULT_DEPOSIT_PERIOD (85 days)
   const [depositPeriod, setDepositPeriod] = useState<number>(DEFAULT_DEPOSIT_PERIOD);

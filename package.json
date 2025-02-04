@@ -4,19 +4,22 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-   "dev": "vite --host",
+    "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@web3modal/wagmi": "^5.1.11",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "ethers": "^6.13.5",
     "lucide-react": "^0.474.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.8",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "wagmi": "^2.14.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
