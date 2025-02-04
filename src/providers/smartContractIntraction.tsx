@@ -13,7 +13,7 @@ const SmartContractInteraction: React.FC = () => {
   const { data,  } = useReadContract({
     abi: USDTAbi,
     address: USDTAddress,
-    functionName: 'BASE_PERCENT',
+    functionName: 'totalSupply'
   });
   const { address } = useAccount();
 

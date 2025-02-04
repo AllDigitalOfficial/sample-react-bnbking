@@ -1,10 +1,10 @@
 import React from "react";
 import { Navbar, Container, Button, Nav } from "react-bootstrap";
+import { WalletConnect } from "..";
 const primaryColor = import.meta.env.VITE_APP_PRIMARY_COLOR || "#FFD700"; 
 const depositLink = import.meta.env.VITE_APP_DEPOSIT_LINK || '#deposit';
 const header_Bg = import.meta.env.VITE_HEADER_BACKGROUND_COLOR || ''
 const Vite_App_Title = import.meta.env.VITE_APP_TITLE || 'BNBKING'
-import WalletConnect from "../walletConnect/index";
 
 const Header: React.FC = () => {
   return (
