@@ -1,0 +1,11 @@
+
+:root {
+    --w3m-color-mix: #fff;
+    --w3m-accent: #ff9e1f !important;
+    --w3m-default: #fff;
+  }
+  * {
+    font-family: 'Inter', sans-serif;
+  }
+  
+ 

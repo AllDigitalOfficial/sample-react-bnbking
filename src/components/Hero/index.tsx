@@ -7,9 +7,14 @@ const percentEnd = import.meta.env.VITE_APP_END_PERCENTAGE || 2.3;
 const referralLevels = import.meta.env.VITE_APP_REFERRAL_LEVELS || 10;
 const depositLink = import.meta.env.VITE_APP_DEPOSIT_LINK || '#deposit';
 const presentationLink = import.meta.env.VITE_PRESENTATION_LINK || '#presentation';
+const primaryColorBorder = import.meta.env.VITE_APP_PRIMARY_COLOR || 'yellow';
+import { useContractData } from "../context/DataContext";
 
+const Hero: React.FC = () => {
+  
+  const { data } = useContractData();
+  return(
 
-const Hero: React.FC = () => (
   <Container className="py-5 col-lg-10 ">
     <Row className="align-items-center">
       <Col md={6} className="text-center text-md-start">
@@ -31,21 +36,21 @@ const Hero: React.FC = () => (
         </div >
       </Col>
       <Col md={6} className="mt-5 mt-md-0">
-        <Card bg="dark" text="white" className="shadow-lg">
+        <Card bg="dark" text="white" className="shadow-lg" style={{ border: `4px solid ${primaryColorBorder}` }}> 
           <Card.Body>
             <div className="mb-4 text-center">
               <h5>Total BNB Invested</h5>
-              <p className="display-6 fw-bold" style={{ color:primaryColor }}>0 BNB</p>
+              <p className="display-6 fw-bold" style={{ color:primaryColor }}>{ data?.totalDeposits || 0 }</p>
             </div>
             <div className="text-center">
               <h5>Total Referral BNB Reward</h5>
-              <p className="display-6 fw-bold" style={{ color:primaryColor }}>0 BNB</p>
+              <p className="display-6 fw-bold" style={{ color:primaryColor }}>{ data?.refRewards || 0 }</p>
             </div>
           </Card.Body>
         </Card>
       </Col>
     </Row>
   </Container>
-);
+)};
 
 export default Hero;

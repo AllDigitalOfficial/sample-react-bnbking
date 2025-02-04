@@ -1,0 +1,27 @@
+.custom-range::-webkit-slider-thumb {
+    background-color: #ffc107; /* Change to your desired color */
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-range::-moz-range-thumb {
+    background-color: #ffc107; /* Change to your desired color */
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .custom-range::-ms-thumb {
+    background-color: #ffc107; /* Change to your desired color */
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  

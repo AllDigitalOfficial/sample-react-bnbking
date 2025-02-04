@@ -9,13 +9,10 @@ const Footer: React.FC = () => (
   
   <footer className="container py-4">
     
-    <div className="d-flex justify-content-between align-items-center">
+    <div className="d-flex justify-content-center align-items-center text-white text-center"> © 2025 {footeText} All Right Reserved
       
-      <span className='text-white' >© 2025 {footeText} All Right Reserved</span>
-      <div className="d-flex gap-3">
-        <button  className="btn btn-warning" >SmartContract</button>
-        
-      </div>
+
+     
     </div>
   </footer>
 );
